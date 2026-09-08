@@ -2,7 +2,10 @@
   "name": "@angularModuleFederation/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve dashboard --devRemotes=login",
+    "build": "nx build source"
+  },
   "private": true,
   "devDependencies": {
     "@analogjs/vite-plugin-angular": "~2.6.0",
