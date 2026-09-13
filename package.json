@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve dashboard --devRemotes=login",
+    "start-employee": "nx serve employee --devRemotes=login",
     "build": "nx build source"
   },
   "private": true,
