@@ -1,3 +1,42 @@
 @import "tailwindcss";
-
+@config "../../../tailwind.config.js";
 @source ".";
+
+@theme inline {
+  --color-primary: var(--app-color-primary);
+  --color-secondary: var(--app-color-secondary);
+  --color-background: var(--app-color-background);
+  --color-text: var(--app-color-text);
+}
+
+/* Default / Light Theme */
+:root, [data-theme="light"] {
+  --app-color-primary: rgb(59 130 246);    /* Blue */
+  --app-color-secondary: rgb(16 185 129);  /* Emerald */
+  --app-color-background: rgb(255 255 255);/* White */
+  --app-color-text: rgb(31 41 55);         /* Gray 800 */
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --app-color-primary: rgb(96 165 250);    /* Lighter Blue */
+  --app-color-secondary: rgb(52 211 153);  /* Lighter Emerald */
+  --app-color-background: rgb(17 24 39);   /* Gray 900 */
+  --app-color-text: rgb(243 244 246);      /* Gray 100 */
+}
+
+/* Autumn / Corporate Custom Theme */
+[data-theme="autumn"] {
+  --app-color-primary: rgb(194 65 12);     /* Orange 700 */
+  --app-color-secondary: rgb(180 83 9);    /* Amber 700 */
+  --app-color-background: rgb(254 251 236);/* Warm Cream */
+  --app-color-text: rgb(67 32 10);         /* Deep Brown */
+}
+
+/* Ocean Theme */
+[data-theme="ocean"] {
+  --app-color-primary: rgb(14 116 144);     /* Cyan 700 */
+  --app-color-secondary: rgb(13 148 136);  /* Teal 600 */
+  --app-color-background: rgb(236 254 255);/* Cyan 50 */
+  --app-color-text: rgb(22 78 99);          /* Cyan 900 */
+}
