@@ -3,4 +3,28 @@
 <li><a routerLink="login">Login</a></li>
 <li><a routerLink="todo">Todo</a></li>
 </ul>
+
+<div class="min-h-screen bg-background text-text p-8 transition-colors duration-300">
+      <header class="flex justify-between items-center max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-primary">Dynamic Theming System</h1>
+        
+        <!-- Theme Select Buttons -->
+        <div class="flex gap-2">
+          @for (theme of themes; track theme) {
+            <button 
+              (click)="themeService.setTheme(theme)"
+              [class.ring-2]="themeService.currentTheme() === theme"
+              class="px-4 py-2 rounded-lg bg-secondary text-background font-medium capitalize ring-primary transition">
+              {{ theme }}
+            </button>
+          }
+        </div>
+      </header>
+
+      <main class="max-w-4xl mx-auto mt-12 bg-background border border-text/10 p-6 rounded-xl shadow-md">
+        <p class="text-lg">
+          This box adapts immediately when you swap themes because it uses standard class combinations like <code class="bg-text/10 px-1 rounded">bg-background</code> and <code class="bg-text/10 px-1 rounded">text-primary</code>!
+        </p>
+      </main>
+    </div>
 <router-outlet></router-outlet>
