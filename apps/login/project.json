@@ -62,7 +62,7 @@
     },
     "serve": {
       "continuous": true,
-      "executor": "@nx/angular:dev-server",
+      "executor": "@nx/angular:module-federation-dev-server",
       "defaultConfiguration": "development",
       "options": {
         "port": 4201,
